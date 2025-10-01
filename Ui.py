@@ -208,3 +208,13 @@ if uploaded_file:
             st.error(f"Error communicating with backend: {e}")
 else:
     st.warning("Please upload an institutional dataset to view the dashboard.")
+
+st.markdown(
+    """
+    <hr style="margin-top: 50px;">
+    <p style="text-align: center; color: gray; font-size: 12px;">
+        © Made by Team D-Generation X for SIH '25
+    </p>
+    """,
+    unsafe_allow_html=True
+)
