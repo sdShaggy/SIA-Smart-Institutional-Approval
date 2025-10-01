@@ -9,9 +9,9 @@ app = Flask(__name__)
 
 # ------------------- Load pre-trained artifacts -------------------
 try:
-    model = joblib.load("xgb_model.pkl")
-    scaler = joblib.load("scaler.pkl")
-    features = joblib.load("features.pkl")
+    model = joblib.load("models/xgb_model.pkl")
+    scaler = joblib.load("models/scaler.pkl")
+    features = joblib.load("models/features.pkl")
     explainer = shap.TreeExplainer(model)
 except Exception as e:
     raise RuntimeError(f"Failed to load model/scaler/features: {e}")
@@ -144,3 +144,4 @@ def predict():
 
 if __name__ == "__main__":
     app.run(debug=True)
+
